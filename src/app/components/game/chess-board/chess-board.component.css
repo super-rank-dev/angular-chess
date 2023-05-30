@@ -1,0 +1,13 @@
+.container {
+    perspective: 800px;
+}
+
+.chess-board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    border-radius: 2px;
+    box-shadow: 4px 4px 4px;
+    overflow: hidden;
+    transform: rotateX(45deg);
+}

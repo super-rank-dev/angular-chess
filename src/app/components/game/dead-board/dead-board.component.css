@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 100px;
+    margin: 60px 0;
+    padding: 10px;
+}
+
+:host.dark {
+    align-self: flex-start;
+    border: 4px dashed grey;
+}
+
+:host.white {
+    align-self: flex-end;
+    border: 4px dashed lightgrey;
+}
+
+div img {
+    width: 40px;
+}

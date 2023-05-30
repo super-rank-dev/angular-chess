@@ -1,0 +1,6 @@
+<div class="container">
+    <div class="chess-board">
+        <app-chess-cell *ngFor="let item of chessCell; let i = index" [chessMan]="item.chessMan"
+            [bgColor]="item.bgColor" [status]="item.status" (click)="onClick(i)"></app-chess-cell>
+    </div>
+</div>

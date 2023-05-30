@@ -1,0 +1,6 @@
+<div *ngIf="chessMan; else elseBlock" [class]="bgColor" class="chess-piece">
+    <img [src]="'assets/img/' + chessMan.getTeam() + '/' + chessMan.getType()">
+</div>
+<ng-template #elseBlock>
+    <div [class]="bgColor" class="chess-piece"></div>
+</ng-template>

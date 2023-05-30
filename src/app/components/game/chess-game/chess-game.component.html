@@ -1,0 +1,5 @@
+<div>
+    <app-dead-board [deadMen]="darkDeadMen" class="dark"></app-dead-board>
+    <app-chess-board [chessBoard]="chessGame.chessBoard" (dataEvent)="updateGame()"></app-chess-board>
+    <app-dead-board [deadMen]="whiteDeadMen" class="white"></app-dead-board>
+</div>
