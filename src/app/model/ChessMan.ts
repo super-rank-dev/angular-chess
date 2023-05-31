@@ -154,6 +154,19 @@ class ChessMan {
             case ChessManType.Bot:
                 possibility = false;
                 const chessMan = this.chessBoard.getChessMan({ row: position.row, col: position.col });
+                if (position.col === this.position.col &&
+                    Math.abs(position.row - this.position.row) === 2) {
+                    if (!chessMan) {
+                        if (this.position.row === 1 &&
+                            this.getTeam() === ChessManTeam.White &&
+                            !this.chessBoard.getChessMan({ row: 2, col: this.position.col }))
+                            possibility = true;
+                        else if (this.position.row === 6 &&
+                            this.getTeam() === ChessManTeam.Dark &&
+                            !this.chessBoard.getChessMan({ row: 5, col: this.position.col }))
+                            possibility = true;
+                    }
+                }
                 if (position.row === this.position.row &&
                     Math.abs(position.col - this.position.col) === 1) {
                     possibility = true;
